@@ -50,3 +50,12 @@
         letter-spacing: -1px;
     }
 }
+
+.scoreStyleDelay {
+    animation: zoom .2s ease-out;
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}

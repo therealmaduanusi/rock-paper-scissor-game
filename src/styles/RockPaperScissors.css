@@ -1,0 +1,217 @@
+.rockPaperScissorWrapper {
+    margin-top: 3rem;
+    min-height: 400px;
+}
+
+.rockPaperScissorContainer {
+    background-image: url('../assets/images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: 250px; 
+    background-position: center;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+.paperAndScissor {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.gameTools {
+    background-color: #fff;
+    border-radius: 50%;
+    max-width: 9rem;
+    max-height: 9rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1rem solid;
+    cursor: pointer;
+}
+
+.gameTools:hover {
+    transform: scale(1.2);
+    transition: transform .3s;
+}
+
+.gameTools img {
+    width: 100%;
+}
+
+/* linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%)) */
+.paper {
+    border-color: hsl(230, 89%, 62%);
+}
+.scissor {
+    border-color: hsl(39, 89%, 49%);
+}
+.rock {
+    border-color: hsl(349, 71%, 52%);
+    align-self: center;
+}
+
+/* Picked Valued */
+.pickedContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #fff;
+}
+.youPickedContainer {
+    justify-self: center;
+}
+/* user and computer */
+.valuePicked {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+/* computer */
+.computerPickedContainer {
+    display: flex;
+    flex-direction: column;
+}
+.computerPicked {
+    align-self: center;
+}
+.computerPickedDelay {
+    height: 75%;
+    width: 9rem;
+    border-radius: 50%;
+    background-color: hsla(238, 48%, 15%, 0.26);
+}
+.computerPickedContainer .gameTools,
+.winOrLose, .linkContainerBtn {
+    animation: scale .5s;
+}
+
+@keyframes scale {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* WIN OR LOSE */
+.winOrLoseContainer {
+    justify-self: center;
+    align-self: center;
+}
+.winOrLose {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    /* width: 100%; */
+}
+.linkContainerBtn {
+    display: block;
+    width: 100%;
+}
+
+.youPickedText, .housePickedText {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.playAgainBtn {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.playAgainBtn:hover {
+    color: hsl(349, 71%, 52%);
+}
+
+/* .youPicked::before, .computerPicked::before {
+    content: 'hdhd';
+} */
+
+@media (min-width: 550px) {
+    .winnerAnimation .gameTools::before {
+        content: '';
+        position: absolute;
+        background: radial-gradient(rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.100) 23%);
+        min-width: 400px;
+        min-height: 400px;
+        border-radius: 50%;
+        animation: winner 1s;
+        z-index: -1;
+    }
+    @keyframes winner {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+    }
+    .computerPickedContainer {
+        display: flex;
+    }
+}
+@media (max-width: 550px) {
+
+    .winnerAnimation .gameTools::before {
+        content: '';
+        position: absolute;
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%);  */
+        background: radial-gradient(rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(255, 255, 255, 0.100) 23%);
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        animation: winner 1s;
+        z-index: -1;
+        pointer-events: none;
+    }
+    @keyframes winner {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+    }
+
+
+    .pickedContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem 1rem;
+    }
+
+    .youPickedContainer, .computerPickedContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .youPickedText, .housePickedText {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .winOrLoseContainer {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        width: 100%;
+    }
+    .linkContainerBtn {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .playAgainBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .main {
+        margin: 1rem 0.5rem;
+    }
+    .paperAndScissor {
+        justify-content: space-between;
+    }
+    .gameTools {
+        /* max-width: 7rem;
+        max-height: 7rem;
+        padding: 1rem; */
+    }
+}
