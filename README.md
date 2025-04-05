@@ -40,14 +40,15 @@ LOSE
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click Here](https://www.frontendmentor.io/solutions/rock-paper-scissor-game-using-reactjs-and-pure-css-wCi7VeozQ8)
+- Live Site URL: [Click Here](https://rock-paper-scissor-game-vm.vercel.app/)
 
 ## My process
 
 ### Built with
 
 - Reactjs
+- HTML
 - CSS custom properties
 - Flexbox
 - CSS Grid
