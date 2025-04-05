@@ -1,7 +1,12 @@
 .main {
-  margin: 1rem auto;
-  max-width: 800px;
-  min-height: 100vh;
+  margin: 1rem 0;
+  min-height: 100%;
+}
+@media (min-width: 700px) {
+  .main {
+    margin: 1rem auto;
+    max-width: 800px;
+  }
 }
 
 .rulesWrapper {
@@ -10,11 +15,11 @@
   top: 0;
   bottom: -15px;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 102vh; */
+  z-index: 2; /* over lap .winOrLoseContainer and footer */
 }
 
 .rulesContainer {
@@ -52,6 +57,9 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 1; /* over lap .winOrLoseContainer */
 }
 
 .rulesBtn {
