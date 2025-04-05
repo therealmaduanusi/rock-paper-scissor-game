@@ -135,6 +135,16 @@
 
 /* for win or lose size */
 @media (min-width: 700px) {
+    .rockPaperScissorWrapper {
+        min-height: 0;
+    }
+    .rockPaperScissorContainer {
+        row-gap: 1rem;
+        background-size: 200px;
+    }
+    .paperAndScissor {
+        justify-content: space-around;
+    }
     .pickedContainer .gameTools {
         cursor: default; /* Remove cursor after picked */
         transform: scale(1.5);
